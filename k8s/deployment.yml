@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-node
+  name: hello-node
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-node
+  template:
+    metadata:
+      labels:
+        app: hello-node
+    spec:
+      containers:
+      - image: ashikmhd/node-web-app:latest
+        imagePullPolicy: Always
+        name: hello-node
