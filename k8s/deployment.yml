@@ -4,6 +4,7 @@ metadata:
   labels:
     app: hello-node
   name: hello-node
+  namespace: hello-node
 spec:
   replicas: 2
   selector:
